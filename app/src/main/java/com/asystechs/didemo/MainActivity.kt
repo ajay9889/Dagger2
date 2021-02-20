@@ -7,7 +7,7 @@ class MainActivity : AppCompatActivity() {
 
 
    /*
-
+   Logic
    smartPhomne-Depedent { depedency are
         1->MemoryCard,
         2-> Battery

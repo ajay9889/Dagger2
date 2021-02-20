@@ -12,3 +12,6 @@ To generate the code we need to create componant interface
 required to write abstract function
 
 --> Cannot instanciate using Module and creating provider it can be handle.
+
+
+--> Interface do not have the constructor injection.

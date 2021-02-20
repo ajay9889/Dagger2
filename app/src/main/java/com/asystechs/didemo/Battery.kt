@@ -3,12 +3,8 @@ package com.asystechs.didemo
 import android.util.Log
 import javax.inject.Inject
 
-class Battery @Inject constructor() {
-    init {
-        Log.i("MYTAG","Battery Constructed")
-    }
+// will not have
+abstract interface Battery  {
 
-    fun getPower(){
-        Log.i("MYTAG","Battery power is available")
-    }
+    abstract fun getPower()
 }
