@@ -2,7 +2,6 @@ package com.asystechs.didemo
 
 import dagger.Binds
 import dagger.Module
-import dagger.Provides
 
 // we can directy construct
 /*
@@ -19,5 +18,5 @@ import dagger.Provides
 @Module
 abstract class NcBatterModule {
     @Binds
-    abstract fun provideBattery(nickelCadmiumBatter: NickelCadmiumBatter):Battery
+    abstract fun provideBattery(nickelCadmiumBattery: NickelCadmiumBattery):Battery
 }

@@ -24,9 +24,16 @@ class MainActivity : AppCompatActivity() {
         // Dependencies injections
 //        DaggerSmartPhoneComponant.create().getSmartPhone().makeACallWithRecording()
 
-        DaggerSmartPhoneComponant.create().inject(this)
         // Field injection
-        smartPhone.makeACallWithRecording()
+        /*DaggerSmartPhoneComponant.create().inject(this)
+        smartPhone.makeACallWithRecording()*/
+
+
+        // Passing paramters
+        DaggerSmartPhoneComponant.builder().
+        memoryCardModule(MemoryCardModule(1000)).
+        build()
+        .inject(this)
 
     }
 }
