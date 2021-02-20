@@ -18,3 +18,4 @@ required to write abstract function
 
 -- We can inject parameter usig field injection as dagger doesn't allow to directly
 
+@Singleton to minimise the recreation of DI

@@ -30,9 +30,8 @@ class MainActivity : AppCompatActivity() {
 
 
         // Passing paramters
-        DaggerSmartPhoneComponant.builder().
-        memoryCardModule(MemoryCardModule(1000)).
-        build()
+
+        ( application as SmartPhoneApplication).smartPhoneComponant
         .inject(this)
 
     }
