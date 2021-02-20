@@ -15,3 +15,6 @@ required to write abstract function
 
 
 --> Interface do not have the constructor injection.
+
+-- We can inject parameter usig field injection as dagger doesn't allow to directly
+

@@ -2,6 +2,7 @@ package com.asystechs.didemo
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import javax.inject.Inject
 
 class MainActivity : AppCompatActivity() {
 
@@ -14,13 +15,18 @@ class MainActivity : AppCompatActivity() {
         3.SimCar-->Service provider
     }*/
 
-    private lateinit var smartPhone: SmartPhone;
+
+    @Inject lateinit var smartPhone: SmartPhone;
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         // Dependencies injections
-        DaggerSmartPhoneComponant.create().getSmartPhone().makeACallWithRecording()
+//        DaggerSmartPhoneComponant.create().getSmartPhone().makeACallWithRecording()
+
+        DaggerSmartPhoneComponant.create().inject(this)
+        // Field injection
+        smartPhone.makeACallWithRecording()
 
     }
 }
